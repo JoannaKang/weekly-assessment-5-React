@@ -1,0 +1,19 @@
+.input-form {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.addbutton{
+  background-color: #6298fc;
+  margin-left: 10px;
+  color: white;
+  border: 0;
+  outline: 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input {
+  height: 25px;
+  border: 0;
+}

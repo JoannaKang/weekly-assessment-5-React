@@ -1,0 +1,12 @@
+.Nav-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 40px;
+}
+
+.List-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+  justify-content: center;
+}

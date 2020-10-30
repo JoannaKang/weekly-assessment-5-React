@@ -1,0 +1,52 @@
+{
+  "name": "codeworks-weekly-assessment-5",
+  "version": "1.1.0",
+  "description": "A Codeworks weekly assessment for students",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd client && npm i .",
+    "lint": "cd client && ng lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeworksbcn/weekly-assessment-5.git"
+  },
+  "author": "Codeworks",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/codeworksbcn/weekly-assessment-5/issues"
+  },
+  "homepage": "https://github.com/codeworksbcn/weekly-assessment-5#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-changelog"
+    }
+  },
+  "devDependencies": {
+    "@ljharb/eslint-config": "13.1.1",
+    "cz-changelog": "1.0.1",
+    "del": "4.1.1",
+    "eslint": "5.16.0",
+    "eslint-plugin-json": "1.4.0",
+    "gulp": "4.0.2",
+    "gulp-eslint": "5.0.0",
+    "gulp-load-plugins": "1.6.0",
+    "gulp-replace": "1.0.0",
+    "husky": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0"
+  }
+}
