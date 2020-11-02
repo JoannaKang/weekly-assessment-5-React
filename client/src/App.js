@@ -8,12 +8,31 @@ import ApiService from './ApiService'
 
 function App() {
 
-  const [votes, setVote] = useState([])
+  const [votelist, setVotelist] = useState([])
 
   useEffect(() => {
     ApiService.getVotelist()
-      .then(data => setVote(data))
+      .then(data => setVotelist(data))
   }, [])
+
+
+  const deleteVotelist = async (id) => {
+    await ApiService.voteListDelete(id);
+    ApiService.getVotelist()
+      .then(data => setVotelist(data));
+  }
+
+  const updateVoteCount = async (id, votetype) => {
+    await ApiService.voteUpandDown(id, votetype)
+    ApiService.getVotelist()
+      .then(data => setVotelist(data));
+  }
+
+  if (votelist === []) {
+    return null;
+  } else if (votelist === undefined) {
+    return null
+  }
 
   return (
     <>
@@ -21,7 +40,10 @@ function App() {
         <Navbar />
       </div>
       <div className="List-container">
-        <List value={votes} />
+        <List
+          value={votelist}
+          deletevotelist={deleteVotelist}
+          updateVoteCount={updateVoteCount} />
       </div>
     </>
   );

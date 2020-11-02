@@ -11,7 +11,6 @@ exports.voteListCreate = async (req, res) => {
 }
 
 exports.voteListDelete = async (req, res) => {
-  console.log(req._id);
   await VoteInfo.deleteOne({
     _id: req.params.id
   });
